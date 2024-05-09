@@ -1,0 +1,6 @@
+torch 
+transformers
+datasets
+flash_attn
+datasets
+huggingface_hub

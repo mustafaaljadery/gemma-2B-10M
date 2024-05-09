@@ -1,6 +1,7 @@
 import torch
 from transformers import AutoTokenizer
 from .gemma import GemmaForCausalLM
+from huggingface_hub import snapshot_download
 
 def generate(model, tokenizer, prompt_text, max_length=10000, temperature=0.8):
     model.eval()
@@ -23,12 +24,15 @@ def generate(model, tokenizer, prompt_text, max_length=10000, temperature=0.8):
     generated_text = tokenizer.decode(generated_sequence[0], skip_special_tokens=True)
     return generated_text.replace(prompt_text, "")
 
-model_path = "./models/gemma-2b-10m"
+
+model_name = "mustafaaljadery/gemma-2B-10M"
+local_path = snapshot_download(repo_id=model_name, cache_dir="./models")
+
+model_path = "./models/models--mustafaaljadery--gemma-2B-10M"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = GemmaForCausalLM.from_pretrained(
     model_path,
-    torch_dtype=torch.bfloat16,
-    device_map={"": 0},
+    torch_dtype=torch.bfloat16
 )
 
 prompt_text = "Summarize this harry potter book..."
