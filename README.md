@@ -11,9 +11,6 @@ Gemma 2B with recurrent local attention with context length of up to 10M. Our im
 - Native inference optimized for cuda.
 - Recurrent local attention for O(N) memory.
 
-# More details
-For more context about our motivations, implementation details, and the theory behind the work, check out our technical overview on [medium](https://medium.com/@akshgarg_36829/gemma-10m-technical-overview-900adc4fbeeb). 
-
 ## Quick Start
 
 > **Note:** This is a very early checkpoint of the model. Only 200 steps. We plan on training for a lot more tokens!
@@ -57,6 +54,9 @@ The largest bottleneck (in terms of memory) for LLMs is the KV cache. It grows q
 Our approach splits the attention in local attention blocks as outlined by [InfiniAttention](https://arxiv.org/abs/2404.07143). We take those local attention blocks and apply recurrance to the local attention blocks for the final result of 10M context global atention.
 
 A lot of the inspiration for our ideas comes from the [Transformer-XL](https://arxiv.org/abs/1901.02860) paper.
+
+## More details
+For more context about our motivations, implementation details, and the theory behind the work, check out our technical overview on [medium](https://medium.com/@akshgarg_36829/gemma-10m-technical-overview-900adc4fbeeb). 
 
 ## Credits
 
