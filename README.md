@@ -1,6 +1,6 @@
-# Gemma 10M MLX
+# Gemma 2B - 10M Context
 
-Gemma 2B with 10M context that runs on apple MLX. Our implementation uses **<32GB** of memory!
+Gemma 2B with recurrent local attention with context length of up to 10M. Our implemenation uses **<32GB** of memory!
 
 ![Graphic of our implementation context](./images/graphic.png)
 
@@ -12,6 +12,8 @@ Gemma 2B with 10M context that runs on apple MLX. Our implementation uses **<32G
 - Highly performing retrieval - needle in hay stack.
 
 ## Quick Start
+
+> **Note:** This is a very early checkpoint of the model. Only 200 steps. We plan on traing for a lot more tokens!
 
 Install the model from huggingface using the pypi file - [Huggingface Model](https://huggingface.co/mustafaaljadery/gemma-10M-safetensor).
 
