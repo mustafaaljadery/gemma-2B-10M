@@ -11,6 +11,8 @@ Gemma 2B with recurrent local attention with context length of up to 10M. Our im
 - Native inference optimized for cuda.
 - Recurrent local attention for O(N) memory.
 
+For more information, check out our technical overview on [medium](https://medium.com/@akshgarg_36829/gemma-10m-technical-overview-900adc4fbeeb). 
+
 ## Quick Start
 
 > **Note:** This is a very early checkpoint of the model. Only 200 steps. We plan on training for a lot more tokens!
