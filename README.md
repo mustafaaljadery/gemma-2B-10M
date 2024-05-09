@@ -15,7 +15,7 @@ Gemma 2B with recurrent local attention with context length of up to 10M. Our im
 
 > **Note:** This is a very early checkpoint of the model. Only 200 steps. We plan on training for a lot more tokens!
 
-Install the model from huggingface using the pypi file - [Huggingface Model](https://huggingface.co/mustafaaljadery/gemma-10M-safetensor).
+Install the model from huggingface - [Huggingface Model](https://huggingface.co/mustafaaljadery/gemma-10M-safetensor).
 
 ```bash
 python main.py
