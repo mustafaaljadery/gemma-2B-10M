@@ -7,9 +7,9 @@ Gemma 2B with recurrent local attention with context length of up to 10M. Our im
 **Features:**
 
 - 10M sequence length on Gemma 2B.
-- Runs on less then 32GB of memory.
-- Native inference on Apple Silicon using MLX.
-- Highly performing retrieval - needle in hay stack.
+- Runs on less than 32GB of memory.
+- Native inference optimized for cuda.
+- Recurrent local attention for O(N) memory.
 
 ## Quick Start
 
