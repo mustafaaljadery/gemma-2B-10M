@@ -1,6 +1,6 @@
 # Gemma 2B - 10M Context
 
-Gemma 2B with recurrent local attention with context length of up to 10M. Our implemenation uses **<32GB** of memory!
+Gemma 2B with recurrent local attention with context length of up to 10M. Our implementation uses **<32GB** of memory!
 
 ![Graphic of our implementation context](./images/graphic.png)
 
